@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Typero - Profile</title>
+  <meta name="robots" content="noindex">
+  <link rel="apple-touch-icon" href="/about-hero.png">
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" sizes="any" />
+  <link rel="shortcut icon" href="/favicon.svg" />
+  <script src="/js/fs-restore.js"></script>
+</head>
+<body>
+  <div class="wrap">
+    <div class="top">
+      <div class="logo"><a href="/"><span class="logo-mark"></span> TYPERO</a></div>
+      <div class="inline">
+        <a href="/">New Test</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2 id="profileName">Loading...</h2>
+      <div class="profile-stats">
+        <div class="metric"><div class="k">Total Sessions</div><div id="pSessions" class="v">—</div></div>
+        <div class="metric"><div class="k">Words Typed</div><div id="pWords" class="v">—</div></div>
+        <div class="metric"><div class="k">Best WPM</div><div id="pBest" class="v">—</div></div>
+        <div class="metric"><div class="k">Avg Accuracy</div><div id="pAcc" class="v">—</div></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Typing Activity — past 365 days</h3>
+      <div id="heatmap" class="heatmap-grid"></div>
+      <div class="heatmap-legend">
+        <span>Less</span>
+        <div class="heat-cell lv0"></div>
+        <div class="heat-cell lv1"></div>
+        <div class="heat-cell lv2"></div>
+        <div class="heat-cell lv3"></div>
+        <div class="heat-cell lv4"></div>
+        <span>More</span>
+        <span style="margin-left:8px;opacity:.5">· colour = words typed per day</span>
+      </div>
+    </div>
+
+    <div id="loginNote" class="card" style="display:none">
+      <p>You need to be logged in to view your profile. <a href="/login">Login</a></p>
+    </div>
+  </div>
+  <footer class="footer"><a href="https://soluto.in" target="_blank">A Soluto Product</a></footer>
+
+  <script type="module" src="/js/profile.js"></script>
+</body>
+</html>

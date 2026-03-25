@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Typero - Results</title>
+  <meta name="robots" content="noindex">
+  <link rel="apple-touch-icon" href="/about-hero.png">
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" sizes="any" />
+  <link rel="shortcut icon" href="/favicon.svg" />
+  <script src="/js/fs-restore.js"></script>
+</head>
+<body>
+  <div class="wrap">
+    <div class="top">
+      <div class="logo"><a href="/"><span class="logo-mark"></span> TYPERO</a></div>
+      <div class="inline">
+        <button id="downloadBtn" style="width:auto; padding:6px 14px;">Download Report</button>
+        <a href="/">New Test</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Final Results</h2>
+      <div class="metrics">
+        <div class="metric"><div class="k">Net WPM</div><div id="rNet" class="v">0</div></div>
+        <div class="metric"><div class="k">Gross WPM</div><div id="rGross" class="v">0</div></div>
+        <div class="metric"><div class="k">Peak WPM</div><div id="rPeak" class="v">0</div></div>
+        <div class="metric"><div class="k">CPM</div><div id="rCpm" class="v">0</div></div>
+        <div class="metric"><div class="k">Accuracy</div><div id="rAcc" class="v">0%</div></div>
+      </div>
+      <p id="summary" class="small"></p>
+    </div>
+
+    <div class="card" id="graphCard">
+      <h3 style="margin:0 0 12px">Performance over time</h3>
+      <canvas id="graph"></canvas>
+    </div>
+
+    <div class="card">
+      <h3>What to improve</h3>
+      <div id="improve"></div>
+    </div>
+  </div>
+  <footer class="footer"><a href="https://soluto.in" target="_blank">A Soluto Product</a></footer>
+
+  <script type="module" src="/js/results.js"></script>
+</body>
+</html>

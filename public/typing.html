@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Typero - Typing</title>
+  <meta name="robots" content="noindex">
+  <link rel="apple-touch-icon" href="/about-hero.png">
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" sizes="any" />
+  <link rel="shortcut icon" href="/favicon.svg" />
+  <script src="/js/fs-restore.js"></script>
+</head>
+<body>
+  <div class="wrap">
+    <div class="top">
+      <div class="logo"><a href="/"><span class="logo-mark"></span> TYPERO</a></div>
+      <div class="inline">
+        <span id="modeTag" class="badge"></span>
+      </div>
+    </div>
+
+    <div class="metrics">
+      <div class="metric"><div class="k">WPM + Accuracy</div><div id="wpmAccuracy" class="v">0 • 100%</div></div>
+      <div class="metric"><div class="k">Net WPM</div><div id="netWpm" class="v">0</div></div>
+      <div class="metric"><div class="k">CPM</div><div id="cpm" class="v">0</div></div>
+      <div class="metric"><div class="k">Accuracy</div><div id="accuracy" class="v">100%</div></div>
+      <div class="metric"><div class="k">Time</div><div id="timerText" class="v">0</div></div>
+    </div>
+
+    <div id="typingArea" class="typing-area"></div>
+    <input id="inputSink" class="hidden-input" autofocus />
+
+    <div class="actions" style="margin-top:14px">
+      <button id="restartBtn">Restart</button>
+      <button id="stopBtn">Stop</button>
+    </div>
+    <p class="small" style="text-align:center; margin-top:10px; opacity:0.4">Tab + M to stop</p>
+  </div>
+  <footer class="footer"><a href="https://soluto.in" target="_blank">A Soluto Product</a></footer>
+
+  <button id="soundBtn" class="sound-btn" title="Toggle sound" style="position:fixed;bottom:20px;right:20px;">
+    <svg id="soundIconOn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
+      <path d="M15.54 8.46a5 5 0 0 1 0 7.07"/>
+      <path d="M19.07 4.93a10 10 0 0 1 0 14.14"/>
+    </svg>
+    <svg id="soundIconOff" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none">
+      <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
+      <line x1="17" y1="9" x2="23" y2="15" stroke-dasharray="3 2"/>
+      <line x1="23" y1="9" x2="17" y2="15" stroke-dasharray="3 2"/>
+    </svg>
+  </button>
+
+  <script type="module" src="/js/typing.js"></script>
+</body>
+</html>

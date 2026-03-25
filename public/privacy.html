@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Typero - Privacy</title>
+  <meta name="description" content="Typero keeps it simple: no email required, passwords are hashed, and we never store what you typed. Full privacy details here.">
+  <link rel="canonical" href="https://typero.app/privacy">
+  <meta property="og:title" content="Privacy — Typero">
+  <meta property="og:description" content="Typero keeps it simple: no email required, passwords are hashed, and we never store what you typed. Full privacy details here.">
+  <meta property="og:url" content="https://typero.app/privacy">
+  <meta property="og:site_name" content="Typero">
+  <meta name="theme-color" content="#000000">
+  <meta name="author" content="Sivasoorya (DeadTechGuy)">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://typero.app/about-hero.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@deadtechguy">
+  <meta name="twitter:title" content="Privacy — Typero">
+  <meta name="twitter:description" content="Typero keeps it simple: no email required, passwords are hashed, and we never store what you typed. Full privacy details here.">
+  <meta name="twitter:image" content="https://typero.app/about-hero.png">
+  <link rel="apple-touch-icon" href="/about-hero.png">
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" sizes="any" />
+  <link rel="shortcut icon" href="/favicon.svg" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Privacy — Typero",
+    "url": "https://typero.app/privacy",
+    "description": "Typero keeps it simple: no email required, passwords are hashed, and we never store what you typed.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Typero",
+      "url": "https://typero.app"
+    }
+  }
+  </script>
+</head>
+<body>
+  <div class="wrap">
+    <div class="top">
+      <div class="logo"><a href="/"><span class="logo-mark"></span> TYPERO</a></div>
+      <a href="/">Back to Home</a>
+    </div>
+
+    <div class="card">
+      <h2>Privacy</h2>
+      <p class="small">Typero is a simple tool. This page explains exactly what is stored and what isn't.</p>
+    </div>
+
+    <div class="card">
+      <h3>You don't need an account</h3>
+      <p class="small">Typero works fully without logging in. Guest sessions are not linked to any identity. No IP, no browser fingerprint, nothing. Once the session ends, only the aggregate stats (WPM, accuracy) are stored — not what you typed.</p>
+    </div>
+
+    <div class="card">
+      <h3>If you create an account</h3>
+      <p class="small">We store:</p>
+      <ul class="small" style="padding-left:20px; line-height:2">
+        <li>Your chosen <strong>username</strong> (no email required)</li>
+        <li>A <strong>bcrypt hash</strong> of your password — the actual password is never stored</li>
+        <li>Your typing session stats: WPM, accuracy, duration, character counts, timestamp</li>
+      </ul>
+      <p class="small">We do <strong>not</strong> store:</p>
+      <ul class="small" style="padding-left:20px; line-height:2">
+        <li>The actual text you typed</li>
+        <li>Your email address</li>
+        <li>Your IP address</li>
+        <li>Any tracking or analytics data</li>
+        <li>Anything sold or shared with third parties</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Authentication</h3>
+      <p class="small">Login uses a secure HTTP-only cookie with a JWT token. It expires after 30 days. No third-party auth providers, no OAuth, no social login. Your session lives only on this server and in your browser cookie.</p>
+    </div>
+
+    <div class="card">
+      <h3>Data storage</h3>
+      <p class="small">All data is stored securely on our server. There is no cloud sync, no external database service, and no data leaving the server this app runs on.</p>
+    </div>
+
+    <div class="card">
+      <h3>Deleting your data</h3>
+      <p class="small">There is currently no self-serve account deletion UI. If you'd like your account and all associated data removed, contact at <a href="mailto:dtg@soluto.in" style="color:rgba(255,255,255,0.75)">dtg@soluto.in</a> and it will be done.</p>
+    </div>
+
+  </div>
+  <footer class="footer"><a href="https://soluto.in" target="_blank">A Soluto Product</a></footer>
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Typero — Free Typing Speed Test &amp; WPM Tracker</title>
+  <meta name="description" content="Typero — a distraction-free typing speed test. No ads, no fluff. Measure your WPM, track accuracy, and improve with daily practice.">
+  <meta name="keywords" content="typing speed test, WPM test, typing practice, typing accuracy, free typing test, touch typing">
+  <link rel="canonical" href="https://typero.app/">
+  <meta property="og:title" content="Typero — Distraction-Free Typing Speed Test">
+  <meta property="og:description" content="Typero — a distraction-free typing speed test. No ads, no fluff. Measure your WPM, track accuracy, and improve with daily practice.">
+  <meta property="og:url" content="https://typero.app/">
+  <meta property="og:site_name" content="Typero">
+  <meta name="theme-color" content="#000000">
+  <meta name="author" content="Sivasoorya (DeadTechGuy)">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://typero.app/about-hero.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@deadtechguy">
+  <meta name="twitter:title" content="Typero — Distraction-Free Typing Speed Test">
+  <meta name="twitter:description" content="Typero — a distraction-free typing speed test. No ads, no fluff. Measure your WPM, track accuracy, and improve with daily practice.">
+  <meta name="twitter:image" content="https://typero.app/about-hero.png">
+  <link rel="apple-touch-icon" href="/about-hero.png">
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" sizes="any" />
+  <link rel="shortcut icon" href="/favicon.svg" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Typero",
+    "url": "https://typero.app/",
+    "description": "Typero — a distraction-free typing speed test. No ads, no fluff. Measure your WPM, track accuracy, and improve with daily practice.",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "Any",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  }
+  </script>
+  <script src="/js/fs-restore.js"></script>
+</head>
+<body>
+  <div class="wrap">
+    <div class="top">
+      <div class="logo"><a href="/"><span class="logo-mark"></span> TYPERO</a></div>
+      <div class="inline">
+        <a id="userBadge" class="badge" href="#">Guest mode</a>
+        <a id="loginLink" href="/login">Login</a>
+        <button id="logoutBtn" style="display:none; width:auto; padding:6px 10px;">Logout</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Start typing</h2>
+      <p class="small">A distraction-free space to sharpen your typing speed and accuracy. Every session counts.</p>
+      <div class="grid">
+        <div>
+          <label>Mode</label>
+          <select id="mode">
+            <option value="timed">Timed</option>
+            <option value="open">Open</option>
+          </select>
+        </div>
+        <div>
+          <label>Timer</label>
+          <div class="timer-pick">
+            <button class="timer-btn" data-val="30">30</button>
+            <button class="timer-btn active" data-val="60">60</button>
+            <button class="timer-btn" data-val="120">120</button>
+            <button class="timer-btn" data-val="180">180</button>
+            <input id="timerCustom" class="timer-custom" type="number" min="5" max="600" placeholder="..." />
+          </div>
+        </div>
+        <div>
+          <label>Mistake handling</label>
+          <select id="strict">
+            <option value="forgiving">Forgiving</option>
+            <option value="strict">Strict (must fix)</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="grid" style="margin-top:12px">
+        <div>
+          <label>Text source</label>
+          <div class="source-toggle">
+            <button id="srcDataset" class="src-btn active">Public domain</button>
+            <button id="srcCustom" class="src-btn">Import .txt</button>
+          </div>
+        </div>
+        <div id="fileRow" style="display:none">
+          <label>Text file</label>
+          <input id="file" type="file" accept=".txt" />
+          <span id="fileNote" style="display:block; margin-top:4px; font-size:13px; color:rgba(255,255,255,0.85);"></span>
+        </div>
+      </div>
+
+      <div class="settings-row">
+        <div>
+          <label>Text size: <span id="fontVal">30</span>px</label>
+          <input id="fontSize" type="range" min="18" max="44" value="30" />
+        </div>
+        <div>
+          <label>WPM goal (optional)</label>
+          <input id="wpmGoal" type="number" min="0" max="300" placeholder="None" style="padding:8px" />
+        </div>
+        <div class="inline" style="padding-top:18px">
+          <input id="zenMode" type="checkbox" /><span class="small">Zen mode (hide stats)</span>
+        </div>
+      </div>
+
+      <div class="actions" style="margin-top:12px">
+        <button id="startBtn">Start Typing</button>
+      </div>
+    </div>
+
+    <div id="historyCard" class="card" style="display:none">
+      <h3>Your Past Records</h3>
+      <table class="table" id="historyTable">
+        <thead><tr><th>Time</th><th>Net WPM</th><th>Accuracy</th><th>Peak</th><th>Action</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
+
+  <div style="display:flex; justify-content:center; gap:24px; padding:8px 0; font-size:13px; color:rgba(255,255,255,0.3);">
+    <a href="/guide" style="color:inherit; text-decoration:none;" onmouseover="this.style.color='rgba(255,255,255,0.7)'" onmouseout="this.style.color='inherit'">How to improve typing speed</a>
+    <a href="/privacy" style="color:inherit; text-decoration:none;" onmouseover="this.style.color='rgba(255,255,255,0.7)'" onmouseout="this.style.color='inherit'">Privacy</a>
+    <a href="/about" style="color:inherit; text-decoration:none;" onmouseover="this.style.color='rgba(255,255,255,0.7)'" onmouseout="this.style.color='inherit'">Why Typero</a>
+  </div>
+
+  <footer class="footer"><a href="https://soluto.in" target="_blank">A Soluto Product</a></footer>
+
+  <script type="module" src="/js/index.js"></script>
+</body>
+</html>
