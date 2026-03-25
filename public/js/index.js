@@ -121,7 +121,7 @@ const mobileModal = byId('mobileModal');
 byId('mobileModalClose').addEventListener('click', () => { mobileModal.style.display = 'none'; });
 
 byId('startBtn').addEventListener('click', async () => {
-  if (window.innerWidth < 768) {
+  if (window.innerWidth < 1024 && 'ontouchstart' in window) {
     mobileModal.style.display = 'flex';
     return;
   }
