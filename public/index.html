@@ -115,6 +115,16 @@
       <div class="actions" style="margin-top:12px">
         <button id="startBtn">Start Typing</button>
       </div>
+
+      <!-- Mobile warning popup -->
+      <div id="mobileModal" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.85); z-index:999; display:none; align-items:center; justify-content:center; padding:24px;">
+        <div style="background:#0e0e0e; border:1px solid rgba(255,255,255,0.18); border-radius:14px; padding:28px 24px; max-width:360px; width:100%; text-align:center;">
+          <div style="font-size:32px; margin-bottom:12px;">⌨️</div>
+          <h3 style="margin:0 0 10px;">Not for small screens</h3>
+          <p class="small" style="margin:0 0 20px; line-height:1.7;">Typero is made and tested on larger screens. You need a physical keyboard to type.<br><br><strong>Use a laptop or desktop</strong> for the best experience.</p>
+          <button id="mobileModalClose" style="width:100%; padding:10px;">Got it</button>
+        </div>
+      </div>
     </div>
 
     <div id="historyCard" class="card" style="display:none">

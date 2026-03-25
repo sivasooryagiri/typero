@@ -117,7 +117,14 @@ byId('logoutBtn').addEventListener('click', async () => {
   }
 });
 
+const mobileModal = byId('mobileModal');
+byId('mobileModalClose').addEventListener('click', () => { mobileModal.style.display = 'none'; });
+
 byId('startBtn').addEventListener('click', async () => {
+  if (window.innerWidth < 768) {
+    mobileModal.style.display = 'flex';
+    return;
+  }
   let text = '';
 
   if (currentSource === 'custom') {
